@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    // ViewModelをインスタンス化
-    //@ObservedObjectの属性が付いたオブジェクトのプロパティが変化すると、ビューは自動的に再描画されます。
+//     ViewModelをインスタンス化
+//    @ObservedObjectの属性が付いたオブジェクトのプロパティが変化すると、ビューは自動的に再描画されます。provider的な?
     @ObservedObject var viewModel = RepositoryViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                // $viewModel.queryの値とバインディング
+//                 $viewModel.queryの値とバインディング
                 TextField("Search Repositories", text: $viewModel.query)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
@@ -41,6 +41,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
